@@ -1,0 +1,198 @@
+@import '../Utilities/variables';
+
+header{
+    padding: 10px;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 16px;
+    z-index: 10;
+    transition: .3s;
+
+    .logo{
+        width: 120px;
+        transition: .3s;
+
+        a{
+
+            img{
+                width: 100%;
+            }
+
+        }
+
+        &:hover{
+            transform: scale(1.2);
+        }
+    }
+
+    .btns{
+        display: flex;
+        width: 40%;
+        max-width: 120px;
+        justify-content: space-between;
+
+        .abrir-carrito, .abrir-menu{
+            display: block;
+            border: none;
+            font-size: .9em;
+            background-color: transparent;
+            cursor: pointer;
+            transition: .3s;
+
+            i{
+                font-size: 2.5em;
+                color: #505050;
+                transition: .3s;  
+            }
+
+            &:hover{
+                transform: scale(1.2);
+    
+                i{
+                    color: $amarillo;
+                }
+            }
+        }
+    }
+
+    .nav, .menu-carrito{
+        font-family: "Montserrat", sans-serif;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        height: 100vh;
+        width: 200px;
+        position: absolute;
+        top: 0;
+        right: -280px;
+        background-color: $bordo;
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+        opacity: 0;
+        visibility: hidden;
+        transition: 1s;
+        
+        .cabecera{
+            padding-bottom: 10px;
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            justify-content: space-around;
+            border-bottom: 2px solid $gris;
+
+            img{
+                width: 100px;
+            }
+
+            .cerrar-menu,.borrar-carrito,.cerrar-carrito{
+                border: none;
+                background-color: transparent;
+                cursor: pointer;
+                transition: .3s;
+
+                i{
+                    font-size: 2.5em;
+                    color: $gris;
+                    transition: .3s;
+                }
+
+                &:hover{
+                    transform: scale(1.2);
+        
+                    i{
+                        color: $amarillo;
+                    }
+                }
+            }
+        }
+
+        .nav-list{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            text-align: center;
+            list-style: none;
+            font-size: 1.2em;
+            font-weight: 600;
+
+            a{
+                text-decoration: none;
+                color: #F9FAFB;
+                transition: .3s;
+
+                &:hover{
+                    color: $amarillo;
+                }
+            }
+        }
+    }
+
+    .menu-carrito{
+        width: 250px;
+
+        .cabecera{
+
+            h2{
+                color: $blanco;
+            }
+
+            .borrar-carrito{
+
+                i{
+                    font-size: 1.5em;
+                }
+            }
+        }
+
+        .cuerpo{
+            font-family: "Montserrat", sans-serif;
+            min-height: 500px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            border-bottom: 2px solid $gris;
+
+            .compraCarrito{
+                display: flex;
+                gap: 5px;
+
+                img{
+                    width: 50px;
+                    height: 50px;
+                }
+
+                .datos{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+
+                    p{
+                        font-size: .9em;
+                        font-weight: 600;
+                        color: $blanco;
+                    }
+                }
+            }
+        }
+    }
+
+    &.abajo{
+        padding: 15px;
+        background-color: transparentize($rojo,0.20);
+    }
+
+    .nav.visible {
+        opacity: 1;
+        transform: translate(-280px, 0);
+        visibility: visible;
+    }
+
+    .menu-carrito.visible{
+        opacity: 1;
+        transform: translate(-280px, 0);
+        visibility: visible;
+    }
+}

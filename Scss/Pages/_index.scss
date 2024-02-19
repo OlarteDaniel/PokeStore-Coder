@@ -1,0 +1,117 @@
+@import '../Utilities/variables';
+
+.index{
+    font-size: 16px;
+
+    .fondo-pokeball{
+        width: 100%;
+        height: 70vh;
+        min-height: 480px;
+        max-height: 520px;
+
+        .parte-superior{
+            width: 100%;
+            height: 290px;
+            background-color: $rojo;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            .img1{
+                display: flex;
+                gap: 10px;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-end;
+
+                img{
+                    width: 50%;
+                    min-width: 160px;
+                    max-width: 165px;
+                }
+            }
+
+            .img2{
+                display: none;
+            }
+        }
+
+        .separacion{
+
+            .linea-divisoria {
+                width: 100%;
+                height: 16px; /* Grosor de la línea */
+                background-color: $negro; 
+                position: absolute;
+                top: 285px;
+                transform: translateY(-50%);
+                z-index: 2;
+            }
+    
+            .circulo-en-linea {
+                width: 60px;
+                height: 60px;
+                background-color: $gris-claro; 
+                border: 12px solid $negro; 
+                border-radius: 50%;
+                position: absolute;
+                top: 285px;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 3;
+            }
+        }
+
+        .parte-inferior{
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            background-color: $gris-claro;
+
+            .compra{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+
+                p{
+                font-size: 1.2em;
+                font-weight: 400;
+                color: $gris-oscuro;
+                font-family: "Luckiest Guy", cursive;
+                }
+
+                button{
+                    font-size: 1em;
+                    padding: 10px;
+                    width: 150px;
+                    background-color: $rojo;
+                    border: none;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    transition: .1s;
+
+                    a{
+                        font-family: "Montserrat", sans-serif;
+                        text-decoration: none;
+                        color: $blanco;
+                        font-weight: 500;
+                    }
+
+                    &:hover{
+                        transform: scale(1.2);
+
+                        a{
+                            color: $amarillo;
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+}

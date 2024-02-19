@@ -1,0 +1,357 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  padding: 10px;
+  width: 100%;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 16px;
+  z-index: 10;
+  transition: 0.3s;
+}
+header .logo {
+  width: 120px;
+  transition: 0.3s;
+}
+header .logo a img {
+  width: 100%;
+}
+header .logo:hover {
+  transform: scale(1.2);
+}
+header .btns {
+  display: flex;
+  width: 40%;
+  max-width: 120px;
+  justify-content: space-between;
+}
+header .btns .abrir-carrito, header .btns .abrir-menu {
+  display: block;
+  border: none;
+  font-size: 0.9em;
+  background-color: transparent;
+  cursor: pointer;
+  transition: 0.3s;
+}
+header .btns .abrir-carrito i, header .btns .abrir-menu i {
+  font-size: 2.5em;
+  color: #505050;
+  transition: 0.3s;
+}
+header .btns .abrir-carrito:hover, header .btns .abrir-menu:hover {
+  transform: scale(1.2);
+}
+header .btns .abrir-carrito:hover i, header .btns .abrir-menu:hover i {
+  color: #FFD700;
+}
+header .nav, header .menu-carrito {
+  font-family: "Montserrat", sans-serif;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: 100vh;
+  width: 200px;
+  position: absolute;
+  top: 0;
+  right: -280px;
+  background-color: #971a27;
+  box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: 1s;
+}
+header .nav .cabecera, header .menu-carrito .cabecera {
+  padding-bottom: 10px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-around;
+  border-bottom: 2px solid #505050;
+}
+header .nav .cabecera img, header .menu-carrito .cabecera img {
+  width: 100px;
+}
+header .nav .cabecera .cerrar-menu, header .nav .cabecera .borrar-carrito, header .nav .cabecera .cerrar-carrito, header .menu-carrito .cabecera .cerrar-menu, header .menu-carrito .cabecera .borrar-carrito, header .menu-carrito .cabecera .cerrar-carrito {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: 0.3s;
+}
+header .nav .cabecera .cerrar-menu i, header .nav .cabecera .borrar-carrito i, header .nav .cabecera .cerrar-carrito i, header .menu-carrito .cabecera .cerrar-menu i, header .menu-carrito .cabecera .borrar-carrito i, header .menu-carrito .cabecera .cerrar-carrito i {
+  font-size: 2.5em;
+  color: #505050;
+  transition: 0.3s;
+}
+header .nav .cabecera .cerrar-menu:hover, header .nav .cabecera .borrar-carrito:hover, header .nav .cabecera .cerrar-carrito:hover, header .menu-carrito .cabecera .cerrar-menu:hover, header .menu-carrito .cabecera .borrar-carrito:hover, header .menu-carrito .cabecera .cerrar-carrito:hover {
+  transform: scale(1.2);
+}
+header .nav .cabecera .cerrar-menu:hover i, header .nav .cabecera .borrar-carrito:hover i, header .nav .cabecera .cerrar-carrito:hover i, header .menu-carrito .cabecera .cerrar-menu:hover i, header .menu-carrito .cabecera .borrar-carrito:hover i, header .menu-carrito .cabecera .cerrar-carrito:hover i {
+  color: #FFD700;
+}
+header .nav .nav-list, header .menu-carrito .nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+  list-style: none;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+header .nav .nav-list a, header .menu-carrito .nav-list a {
+  text-decoration: none;
+  color: #F9FAFB;
+  transition: 0.3s;
+}
+header .nav .nav-list a:hover, header .menu-carrito .nav-list a:hover {
+  color: #FFD700;
+}
+header .menu-carrito {
+  width: 250px;
+}
+header .menu-carrito .cabecera h2 {
+  color: #F9FAFB;
+}
+header .menu-carrito .cabecera .borrar-carrito i {
+  font-size: 1.5em;
+}
+header .menu-carrito .cuerpo {
+  font-family: "Montserrat", sans-serif;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-bottom: 2px solid #505050;
+}
+header .menu-carrito .cuerpo .compraCarrito {
+  display: flex;
+  gap: 5px;
+}
+header .menu-carrito .cuerpo .compraCarrito img {
+  width: 50px;
+  height: 50px;
+}
+header .menu-carrito .cuerpo .compraCarrito .datos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+header .menu-carrito .cuerpo .compraCarrito .datos p {
+  font-size: 0.9em;
+  font-weight: 600;
+  color: #F9FAFB;
+}
+header.abajo {
+  padding: 15px;
+  background-color: rgba(220, 53, 69, 0.8);
+}
+header .nav.visible {
+  opacity: 1;
+  transform: translate(-280px, 0);
+  visibility: visible;
+}
+header .menu-carrito.visible {
+  opacity: 1;
+  transform: translate(-280px, 0);
+  visibility: visible;
+}
+
+.index {
+  font-size: 16px;
+}
+.index .fondo-pokeball {
+  width: 100%;
+  height: 70vh;
+  min-height: 480px;
+  max-height: 520px;
+}
+.index .fondo-pokeball .parte-superior {
+  width: 100%;
+  height: 290px;
+  background-color: #DC3545;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.index .fondo-pokeball .parte-superior .img1 {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+.index .fondo-pokeball .parte-superior .img1 img {
+  width: 50%;
+  min-width: 160px;
+  max-width: 165px;
+}
+.index .fondo-pokeball .parte-superior .img2 {
+  display: none;
+}
+.index .fondo-pokeball .separacion .linea-divisoria {
+  width: 100%;
+  height: 16px; /* Grosor de la línea */
+  background-color: #000;
+  position: absolute;
+  top: 285px;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+.index .fondo-pokeball .separacion .circulo-en-linea {
+  width: 60px;
+  height: 60px;
+  background-color: #F5F5F5;
+  border: 12px solid #000;
+  border-radius: 50%;
+  position: absolute;
+  top: 285px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
+.index .fondo-pokeball .parte-inferior {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 50%;
+  background-color: #F5F5F5;
+}
+.index .fondo-pokeball .parte-inferior .compra {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.index .fondo-pokeball .parte-inferior .compra p {
+  font-size: 1.2em;
+  font-weight: 400;
+  color: #333;
+  font-family: "Luckiest Guy", cursive;
+}
+.index .fondo-pokeball .parte-inferior .compra button {
+  font-size: 1em;
+  padding: 10px;
+  width: 150px;
+  background-color: #DC3545;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.1s;
+}
+.index .fondo-pokeball .parte-inferior .compra button a {
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+  color: #F9FAFB;
+  font-weight: 500;
+}
+.index .fondo-pokeball .parte-inferior .compra button:hover {
+  transform: scale(1.2);
+}
+.index .fondo-pokeball .parte-inferior .compra button:hover a {
+  color: #FFD700;
+}
+
+footer {
+  padding: 10px;
+  background-color: #C1C9D0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  font-size: 16px;
+}
+footer .caja {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  max-width: 300px;
+}
+footer .caja .titulo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  font-size: 1.5em;
+  font-weight: 400;
+  color: #F9FAFB;
+  font-family: "Luckiest Guy", cursive;
+}
+footer .caja .titulo img {
+  width: 20px;
+  height: 20px;
+}
+footer .caja .descripcion {
+  width: fit-content;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9em;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+}
+footer .caja .descripcion .dato {
+  padding: 2px 0;
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+}
+footer .caja .redes {
+  display: flex;
+  justify-content: space-between;
+}
+footer .caja .redes a {
+  font-size: 1.5em;
+  color: #333;
+  transition: 0.2s;
+}
+footer .caja .redes a#face:hover {
+  transform: scale(1.2);
+  color: #1877F2; /* Azul de Facebook */
+}
+footer .caja .redes a#wsp:hover {
+  transform: scale(1.2);
+  color: #25D366; /* Verde de WhatsApp */
+}
+footer .caja .redes a#tweet:hover {
+  transform: scale(1.2);
+  color: #1DA1F2; /* Azul de Twitter */
+}
+footer .caja .redes a#insta:hover {
+  transform: scale(1.2);
+  color: #E4405F; /* Rosado/Rojo de Instagram */
+}
+footer .caja input {
+  width: 90vw;
+  max-width: 275px;
+  padding: 10px;
+  border: 1px solid #AAB8C2;
+  border-radius: 5px;
+  font-size: 0.9em;
+  background-color: #F2F4F8;
+}
+footer .caja input::placeholder {
+  color: #333;
+}
+footer .copyright {
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  border-top: 1px solid #333;
+  padding: 10px 0;
+  font-size: 0.9em;
+  color: #333;
+}
+
+/*# sourceMappingURL=style.css.map */
