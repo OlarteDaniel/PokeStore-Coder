@@ -1,4 +1,5 @@
 @import '../Utilities/variables';
+@import '../Breakpoints/medidas';
 
 header{
     padding: 10px;
@@ -73,18 +74,23 @@ header{
         box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
         opacity: 0;
         visibility: hidden;
+        z-index: 15;
         transition: 1s;
         
         .cabecera{
-            padding-bottom: 10px;
             display: flex;
             gap: 20px;
             align-items: center;
             justify-content: space-around;
-            border-bottom: 2px solid $gris;
 
             img{
                 width: 100px;
+            }
+
+            .btns-carrito{
+                display: flex;
+                gap: 10px;
+                font-size: .8em;
             }
 
             .cerrar-menu,.borrar-carrito,.cerrar-carrito{
@@ -92,6 +98,7 @@ header{
                 background-color: transparent;
                 cursor: pointer;
                 transition: .3s;
+                font-size: 1em;
 
                 i{
                     font-size: 2.5em;
@@ -131,11 +138,11 @@ header{
     }
 
     .menu-carrito{
-        width: 250px;
 
         .cabecera{
 
             h2{
+                font-size: 1.5em;
                 color: $blanco;
             }
 
@@ -153,6 +160,7 @@ header{
             display: flex;
             flex-direction: column;
             gap: 10px;
+            border-top: 2px solid $gris;
             border-bottom: 2px solid $gris;
 
             .compraCarrito{
@@ -180,7 +188,7 @@ header{
     }
 
     &.abajo{
-        padding: 15px;
+        padding: 16px;
         background-color: transparentize($rojo,0.20);
     }
 
@@ -194,5 +202,118 @@ header{
         opacity: 1;
         transform: translate(-280px, 0);
         visibility: visible;
+    }
+}
+
+@include desde(480px){
+    header{
+        padding: 16px;
+        font-size: 20px;
+
+        .logo{
+            width: 110px;
+        }
+
+        .btns{
+            width: fit-content;
+
+            .abrir-menu{
+                display: none;
+            }
+        }
+
+        .nav{
+            position: relative;
+            left: 0;
+            width: 60%;
+            min-width: 280px;
+            max-width: 500px;
+            height: 100%;
+            background-color: transparent;
+            box-shadow: none;
+            opacity: 1;
+            visibility: visible;
+            justify-content: center;
+            z-index: 10;
+
+            .cabecera{
+                display: none;
+            }
+
+            .nav-list{
+                flex-direction: row;
+                justify-content: space-around;
+
+                a{
+                    font-size: .8em;
+                }
+            }
+        }
+
+        .menu-carrito{
+            width: 260px;
+
+            .cabecera{
+
+                .btns-carrito{
+                    gap: 20px;
+                }
+            }
+        }
+
+    }
+}
+
+@include desde(768px){
+    header{
+        padding: 16px 22px;
+        font-size: 26px;
+
+        .logo{
+            width: 150px;
+        }
+
+        .nav{
+            min-width: 320px;
+            max-width: 600px;
+
+            .nav-list{
+                justify-content: space-between;
+            }
+        }
+
+        .menu-carrito{
+            width: 320px;
+
+            .cabecera{
+
+                .btns-carrito{
+                    gap: 10px;
+                }
+            }
+        }
+
+        &.abajo{
+            padding: 22px;
+        }
+    }
+}
+
+@include desde(1024px){
+    header{
+        font-size: 30px;
+
+        .logo{
+            width: 160px;
+        }
+
+        .nav{
+            min-width: 400px;
+            max-width: 800px;
+        }
+
+        .menu-carrito{
+            width: 360px;
+        }
     }
 }

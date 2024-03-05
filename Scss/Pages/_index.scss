@@ -1,4 +1,5 @@
 @import '../Utilities/variables';
+@import '../Breakpoints/medidas';
 
 .index{
     font-size: 16px;
@@ -113,5 +114,139 @@
             }
         }
         
+    }
+}
+
+@include desde(480px){
+    .index{
+        font-size: 20px;
+
+        .fondo-pokeball{
+
+            .parte-superior{
+                height: 290px;
+                
+                .img1{
+                    display: none;
+                }
+
+                .img2{
+                    padding-top: 40px;
+                    display: flex;
+                    justify-content: center;
+
+                    img{
+                        width: 80%;
+                        max-width: 500px;
+                    }
+                }
+            }
+
+            .separacion{
+                .linea-divisoria{
+                    top: 285px;
+                }
+
+                .circulo-en-linea{
+                    top: 285px;
+                }
+            }
+
+            .parte-inferior{
+                
+                .compra{
+
+                    button{
+                        padding: 16px;
+                        width: 180px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include desde(768px){
+    .index{
+        font-size: 26px;
+
+        .fondo-pokeball{
+            min-height: 580px;
+            max-height: 640px;
+
+            .parte-superior{
+                height: 310px;
+
+                .img2{
+
+                    img{
+                        max-width: 700px;
+                    }
+                }
+            }
+
+            .separacion{
+
+                .linea-divisoria{
+                    top: 315px;
+                }
+
+                .circulo-en-linea{
+                    top: 315px;
+                }
+            }
+
+            .parte-inferior{                
+                height: 60%;
+
+                .compra{
+    
+                    button{
+                        width: 210px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include desde(1024px){
+    .index{
+        font-size: 30px;
+
+        .fondo-pokeball{
+            min-height: 640px;
+            max-height: 680px;
+
+            .parte-superior{
+                height: 330px;
+
+                .img2{
+                    padding-top: 80px;
+                    
+                }
+            }
+
+            .separacion{
+
+                .linea-divisoria{
+                    top: 335px;
+                }
+
+                .circulo-en-linea{
+                    top: 335px;
+                }
+            }
+
+            .parte-inferior{                
+
+                .compra{
+    
+                    button{
+                        width: 230px;
+                    }
+                }
+            }
+        }
     }
 }
