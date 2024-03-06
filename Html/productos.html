@@ -49,8 +49,14 @@
                     <button class="cerrar-carrito" id="cerrar-carrito"><i class="bi bi-x"></i></button>
                 </div>
             </div>
+
             <div class="cuerpo" id="cuerpoCarrito">
                 
+            </div>
+
+            <div class="footer" id="footerCarrito">
+                <p>Precio: $<span id="precioCarrito">0</span></p>
+                <button id="comprar-carrito">Comprar</button>
             </div>
         </div>
 
@@ -59,7 +65,17 @@
     </header>
 
     <main class="productos">
-        <h1 class="titulo">PRODUCTOS</h1>
+        <div class="titulo">
+            <img src="../Assets/Img/Productos.png" alt="Productos">
+        </div>
+        <div class="btns">
+            <label for="selector">Ordenar por:</label>
+            <select>
+                <option value="">Pokedex</option>
+                <option value="">Mayor a menor</option>
+                <option value="">Menor a mayor</option>
+            </select>
+        </div>
         <div class="contenedor-productos" id="contenedorP">
 
         </div>
@@ -121,9 +137,10 @@
 
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../Assets/Js/header.js"></script>
     <script src="../Assets/Js/funciones_productos.js"></script>
     <script src="../Assets/Js/productos.js"></script>
-
+    
 </body>
 </html>

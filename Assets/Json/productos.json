@@ -3,7 +3,7 @@
         "tipo": "pokemon",
         "cod":"pok1",
         "nombre": "Bulbasaur",
-        "precio": 1500,
+        "precio": 500,
         "cantidad":1,
         "img": "../Assets/Img/Pokemones/Bulbasaur.png"
     },
@@ -11,7 +11,7 @@
         "tipo": "pokemon",
         "cod":"pok2",
         "nombre": "Ivysaur",
-        "precio": 1500,
+        "precio": 1000,
         "cantidad":1,
         "img": "../Assets/Img/Pokemones/Ivysaur.png"    
     },
@@ -26,7 +26,7 @@
         "tipo": "pokemon",
         "cod":"pok4",
         "nombre": "Squirtle",
-        "precio": 1500,
+        "precio": 500,
         "cantidad":1,
         "img": "../Assets/Img/Pokemones/Squirtle.png"
     },
@@ -34,7 +34,7 @@
         "tipo": "pokemon",
         "cod":"pok5",
         "nombre": "Wartortle",
-        "precio": 1500,
+        "precio": 1000,
         "cantidad":1,
         "img": "../Assets/Img/Pokemones/Wartortle.png"    
     },
@@ -49,7 +49,7 @@
         "tipo": "pokemon",
         "cod":"pok7",
         "nombre": "Charmander",
-        "precio": 1500,
+        "precio": 500,
         "cantidad":1,
         "img": "../Assets/Img/Pokemones/Charmander.png"
     },
@@ -57,7 +57,7 @@
         "tipo": "pokemon",
         "cod":"pok8",
         "nombre": "Charmeleon",
-        "precio": 1500,
+        "precio": 1000,
         "cantidad":1,
         "img": "../Assets/Img/Pokemones/Charmeleon.png"    
     },
@@ -72,7 +72,7 @@
         "tipo": "pokemon",
         "cod":"pok10",
         "nombre": "Pichu",
-        "precio": 1500,
+        "precio": 500,
         "cantidad":1,
         "img": "../Assets/Img/Pokemones/Pichu.png"
     },
@@ -80,7 +80,7 @@
         "tipo": "pokemon",
         "cod":"pok11",
         "nombre": "Pikachu",
-        "precio": 1500,
+        "precio": 1000,
         "cantidad":1,
         "img": "../Assets/Img/Pokemones/Pikachu.png"    
     },

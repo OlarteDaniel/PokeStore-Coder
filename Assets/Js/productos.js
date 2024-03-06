@@ -11,7 +11,7 @@ const mostrarProductos = (productos) => {
         let producto = document.createElement("div");
         producto.classList.add("producto");
         producto.innerHTML = `
-        <img src="${prod.img}" alt="">
+        <img class="img-prod" src="${prod.img}" alt="">
         <p class="nombre">${prod.tipo} : ${prod.nombre}</p>
         <p class="precio">$${prod.precio}</p>
         <button id="comprarBtn">Agregar</button>
@@ -20,6 +20,21 @@ const mostrarProductos = (productos) => {
     
         const botonComprar = producto.querySelector('#comprarBtn');
         botonComprar.addEventListener("click", () =>{
+            const Toast = Swal.mixin({
+                toast: true,
+                position: "top-start",
+                showConfirmButton: false,
+                timer: 1500,
+                timerProgressBar: true,
+                didOpen: (toast) => {
+                    toast.onmouseenter = Swal.stopTimer;
+                    toast.onmouseleave = Swal.resumeTimer;
+                }
+            });
+                Toast.fire({
+                icon: "success",
+                title: "Producto Agregado"
+            });
             agregarLocalStorage(productos,prod.cod);
         });
     });
