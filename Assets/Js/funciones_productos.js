@@ -22,8 +22,6 @@ const calcularPrecioTotal = (conjuntoCompras) =>{
     conjuntoCompras.forEach((prod) => {
         total += prod.cantidad * prod.precio;
     });
-
-    console.log(total);
 }
 
 const agregarLocalStorage = (productos, codigo) =>{
@@ -39,15 +37,21 @@ const agregarLocalStorage = (productos, codigo) =>{
     // Si hay productos con el mismo código, suma las cantidades.
     // Si no hay productos con el mismo código, agrega una copia del producto al Map.
     let mapaCompras = new Map();
+
     conjuntoCompras.forEach(compra => {
         if (mapaCompras.has(compra.cod)) {
+
             // Si ya existe un producto con el mismo código, aumenta su cantidad.
             mapaCompras.get(compra.cod).cantidad += compra.cantidad;
+
         } else {
+
             // Si es el primer producto con este código, agrega una copia al Map.
             mapaCompras.set(compra.cod, { ...compra});
+
         }
     });
+
     // Convierte los valores del Map de nuevo a un array para actualizar conjuntoCompras.
     conjuntoCompras = Array.from(mapaCompras.values());
 
@@ -69,15 +73,18 @@ const verificarDuplicados = (prodSeleccionado) =>{
         let productoExistente = comprasAdquiridas.find(prod => prod.cod === prodSeleccionado.cod);
 
         if (productoExistente) {
+            
             // Si ya existe, aumenta la cantidad.
             productoExistente.cantidad++;
 
         } else {
+
             // Si no existe, agrega el producto con cantidad inicializada en 1.
             prodSeleccionado.cantidad = 1;
             comprasAdquiridas.push(prodSeleccionado);
         }
     } else {
+
         // Si no hay productos adquiridos, crea un nuevo array con el producto actual.
         comprasAdquiridas = [prodSeleccionado];
     }
@@ -115,6 +122,19 @@ const actualizarCarrito = (comprasAlmacenadas) =>{
     
 }
 
+const verSelector = () =>{
+    if (filtroStorage) {
+        selector.value = filtroStorage;
+    } else {
+        selector.value = '1';
+    }
+}
+
 document.addEventListener("DOMContentLoaded",() =>{
     actualizarCarrito(comprasAdquiridasStorage);
+    try{
+        verSelector();
+    }catch(error){
+        console.log(error);
+    }
 });

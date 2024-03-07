@@ -114,7 +114,7 @@ header .nav .nav-list, header .menu-carrito .nav-list {
 }
 header .nav .nav-list a, header .menu-carrito .nav-list a {
   text-decoration: none;
-  color: #F9FAFB;
+  color: #D4D8DD;
   transition: 0.3s;
 }
 header .nav .nav-list a:hover, header .menu-carrito .nav-list a:hover {
@@ -132,7 +132,7 @@ header .menu-carrito .cabecera .borrar-carrito i {
 }
 header .menu-carrito .cuerpo {
   font-family: "Montserrat", sans-serif;
-  min-height: 500px;
+  height: 80vh;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -171,10 +171,10 @@ header .menu-carrito .footer p {
   color: #F9FAFB;
 }
 header .menu-carrito .footer button {
+  width: 60%;
   font-size: 0.9em;
   padding: 8px;
   align-self: center;
-  width: 100px;
   color: #F9FAFB;
   background-color: #DC3545;
   border: none;
@@ -502,15 +502,15 @@ header .menu-carrito.visible {
   color: #fff;
   border-radius: 5px;
   background: #dc3545;
-  box-shadow: 0 0 10px rgba(220, 53, 69, 0.7);
   border: 1px solid #c82333;
 }
 .productos .contenedor-productos {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 32px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
 }
 .productos .contenedor-productos .producto {
+  width: 100%;
   font-family: "Luckiest Guy", cursive;
   padding: 20px;
   display: flex;
@@ -520,20 +520,26 @@ header .menu-carrito.visible {
   border: 1px solid #333;
   border-radius: 10px;
 }
+.productos .contenedor-productos .producto .codigo {
+  align-self: flex-start;
+}
 .productos .contenedor-productos .producto .img-prod {
-  width: 150px;
-  height: 150px;
+  width: 140px;
+  height: 140px;
 }
 .productos .contenedor-productos .producto .nombre {
   font-size: 0.9em;
 }
 .productos .contenedor-productos .producto button {
   font-size: 0.9em;
+  font-weight: 600;
   padding: 10px;
-  width: 200px;
+  width: 70%;
+  min-width: 140px;
+  max-width: 200px;
   color: #F9FAFB;
   background-color: #DC3545;
-  border: none;
+  border: 1px solid #c82333;
   border-radius: 5px;
   cursor: pointer;
   transition: 0.3s;
@@ -543,6 +549,89 @@ header .menu-carrito.visible {
   color: #FFD700;
 }
 
+@media screen and (min-width: 400px) {
+  .productos .contenedor-productos .producto .nombre {
+    font-size: 0.7em;
+  }
+}
+@media screen and (min-width: 480px) {
+  .productos {
+    padding: 16px;
+    font-size: 18px;
+    padding-bottom: 80px;
+  }
+  .productos .titulo img {
+    max-width: 300px;
+  }
+  .productos .btns {
+    gap: 16px;
+    margin-bottom: 30px;
+  }
+  .productos .btns select {
+    width: 200px;
+  }
+  .productos .contenedor-productos {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 36px;
+  }
+  .productos .contenedor-productos .producto button {
+    min-width: 160px;
+    max-width: 200px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .productos {
+    padding: 20px;
+    font-size: 20px;
+    padding-bottom: 60px;
+  }
+  .productos .titulo {
+    margin-top: 30px;
+  }
+  .productos .titulo img {
+    max-width: 400px;
+  }
+  .productos .btns {
+    gap: 20px;
+  }
+  .productos .btns select {
+    width: 300px;
+  }
+  .productos .contenedor-productos {
+    grid-template-columns: repeat(auto-fit, minmax(216px, 1fr));
+    gap: 40px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .productos {
+    padding-bottom: 80px;
+  }
+  .productos .titulo {
+    margin-top: 80px;
+  }
+  .productos .titulo img {
+    max-width: 500px;
+  }
+  .productos .btns {
+    gap: 30px;
+  }
+  .productos .btns select {
+    width: 400px;
+  }
+  .productos .contenedor-productos {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 35px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .productos {
+    font-size: 22px;
+  }
+  .productos .contenedor-productos {
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 38px;
+  }
+}
 footer {
   padding: 10px;
   background-color: #C1C9D0;
@@ -598,19 +687,19 @@ footer .caja .redes a {
 }
 footer .caja .redes a#face:hover {
   transform: scale(1.2);
-  color: #1877F2; /* Azul de Facebook */
+  color: #1877F2;
 }
 footer .caja .redes a#wsp:hover {
   transform: scale(1.2);
-  color: #25D366; /* Verde de WhatsApp */
+  color: #25D366;
 }
 footer .caja .redes a#tweet:hover {
   transform: scale(1.2);
-  color: #1DA1F2; /* Azul de Twitter */
+  color: #1DA1F2;
 }
 footer .caja .redes a#insta:hover {
   transform: scale(1.2);
-  color: #E4405F; /* Rosado/Rojo de Instagram */
+  color: #E4405F;
 }
 footer .caja input {
   width: 90vw;
@@ -714,4 +803,4 @@ footer .copyright {
   }
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=Style.css.map */

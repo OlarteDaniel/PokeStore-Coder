@@ -1,7 +1,7 @@
 [
     {
         "tipo": "pokemon",
-        "cod":"pok1",
+        "cod":1,
         "nombre": "Bulbasaur",
         "precio": 500,
         "cantidad":1,
@@ -9,7 +9,7 @@
     },
     {
         "tipo": "pokemon",
-        "cod":"pok2",
+        "cod":2,
         "nombre": "Ivysaur",
         "precio": 1000,
         "cantidad":1,
@@ -17,14 +17,14 @@
     },
     {
         "tipo": "pokemon",
-        "cod":"pok3",
+        "cod":3,
         "nombre": "Venusaur",
         "precio": 1500,
         "cantidad":1,
         "img": "../Assets/Img/Pokemones/Venusaur.png"
     },{
         "tipo": "pokemon",
-        "cod":"pok4",
+        "cod":4,
         "nombre": "Squirtle",
         "precio": 500,
         "cantidad":1,
@@ -32,7 +32,7 @@
     },
     {
         "tipo": "pokemon",
-        "cod":"pok5",
+        "cod":5,
         "nombre": "Wartortle",
         "precio": 1000,
         "cantidad":1,
@@ -40,14 +40,14 @@
     },
     {
         "tipo": "pokemon",
-        "cod":"pok6",
+        "cod":6,
         "nombre": "Blastoise",
         "precio": 1500,
         "cantidad":1,
         "img": "../Assets/Img/Pokemones/Blastoise.png"
     },{
         "tipo": "pokemon",
-        "cod":"pok7",
+        "cod":7,
         "nombre": "Charmander",
         "precio": 500,
         "cantidad":1,
@@ -55,7 +55,7 @@
     },
     {
         "tipo": "pokemon",
-        "cod":"pok8",
+        "cod":8,
         "nombre": "Charmeleon",
         "precio": 1000,
         "cantidad":1,
@@ -63,14 +63,14 @@
     },
     {
         "tipo": "pokemon",
-        "cod":"pok9",
+        "cod":9,
         "nombre": "Charizard",
         "precio": 1500,
         "cantidad":1,
         "img": "../Assets/Img/Pokemones/Charizard.png"
     },{
         "tipo": "pokemon",
-        "cod":"pok10",
+        "cod":10,
         "nombre": "Pichu",
         "precio": 500,
         "cantidad":1,
@@ -78,7 +78,7 @@
     },
     {
         "tipo": "pokemon",
-        "cod":"pok11",
+        "cod":11,
         "nombre": "Pikachu",
         "precio": 1000,
         "cantidad":1,
@@ -86,7 +86,7 @@
     },
     {
         "tipo": "pokemon",
-        "cod":"pok12",
+        "cod":12,
         "nombre": "Raichu",
         "precio": 1500,
         "cantidad":1,

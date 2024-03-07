@@ -127,7 +127,7 @@ header{
 
             a{
                 text-decoration: none;
-                color: #F9FAFB;
+                color: #D4D8DD;
                 transition: .3s;
 
                 &:hover{
@@ -156,7 +156,7 @@ header{
 
         .cuerpo{
             font-family: "Montserrat", sans-serif;
-            min-height: 500px;
+            height: 80vh;
             display: flex;
             flex-direction: column;
             gap: 10px;
@@ -201,10 +201,10 @@ header{
             }
 
             button{
+                width: 60%;
                 font-size: .9em;
                 padding: 8px;
                 align-self: center;
-                width: 100px;
                 color: #F9FAFB;
                 background-color: #DC3545;
                 border: none;
